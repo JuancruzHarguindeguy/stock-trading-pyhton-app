@@ -1,0 +1,6 @@
+requests
+openai
+dotenv
+time
+os
+cvs
