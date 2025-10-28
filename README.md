@@ -20,33 +20,32 @@ El flujo principal del proyecto es:
 ## 🧩 Estructura del proyecto
 
 
-📦 stock-trading-python-app
-│
-├── script.py # Extrae datos desde Polygon y los guarda en un CSV
-├── scriptSnow.py # Extrae datos desde Polygon, agrega ds y los carga en Snowflake
-├── schedule.py # Automatiza la ejecución de los scripts anteriores
-├── ticker.csv # Archivo de salida local (datos extraídos)
-├── .env # Variables de entorno (credenciales y configuración)
+📦 stock-trading-python-app  
+│  
+├── script.py # Extrae datos desde Polygon y los guarda en un CSV  
+├── scriptSnow.py # Extrae datos desde Polygon, agrega ds y los carga en Snowflake  
+├── schedule.py # Automatiza la ejecución de los scripts anteriores  
+├── ticker.csv # Archivo de salida local (datos extraídos)  
+├── .env # Variables de entorno (credenciales y configuración)  
 └── requirements.txt # Dependencias necesarias
-
 ---
 
 ## ⚙️ Configuración del entorno
+
 
 ### 1. Clonar el repositorio
 
 	git clone https://github.com/JuancruzHarguindeguy/stock-trading-python-app.git
 	cd stock-trading-python-app
-###2. Crear entorno virtual
+### 2.  Crear entorno virtual
 	python -m venv pythonenv
----
+
 	 En Windows (PowerShell)
-	pythonenv\\Scripts\\activate
+	pythonenv\\Scripts\\activate  
 ---
 	En Linux/Mac
 	source pythonenv/bin/activate
 
-###3. Instalar dependencias
+### 3. Instalar dependencias
 	pip install -r requirements.txt
-
 
