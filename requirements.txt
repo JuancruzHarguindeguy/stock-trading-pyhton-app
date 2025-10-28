@@ -1,6 +1,5 @@
 requests
 openai
 dotenv
-time
-os
-cvs
+schedule
+snowflake-connector-python

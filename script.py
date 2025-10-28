@@ -5,7 +5,7 @@ import csv
 from dotenv import load_dotenv
 
 load_dotenv()
-POLYGON_API_KEY = os.getenv("POLYGON_API_KEY") or "I8ev8vnep0xiZtZuwHYqUrJrM_AkFbty"
+POLYGON_API_KEY = os.getenv("POLYGON_API_KEY") 
 
 LIMIT = 1000
 URL = f"https://api.polygon.io/v3/reference/tickers?market=indices&active=true&order=asc&limit={LIMIT}&sort=ticker&apiKey={POLYGON_API_KEY}"
@@ -39,6 +39,7 @@ def write_ticker_row(item):
 
 # primera petición
 resp = requests.get(URL)
+print(resp.json())
 requests_made += 1
 data = resp.json()
 for it in data.get("results", []):
@@ -57,6 +58,7 @@ while data.get("next_url"):
     requests_made += 1
     data = resp.json()
     results = data.get("results", [])
+    print(results)
     if not results:
         print("Sin 'results' en la respuesta. Terminando.")
         break
